@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    width: 80%;
+    height: 90%;
+    background: white;
+    box-shadow: 0px 0px 50px -1px rgb(0, 0, 0 , 0.5); 
+    padding: 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 250px;
+    height: 350px;
+    background: #282828;
+    transition: 1s linear;
+}
+
+header .logo h1 {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+header .logo img {
+   width: 300px;
+   margin: 20px 0px 0px -30px;
+   filter: drop-shadow(0px 0px 20px rgb(0,0,0,0.6));
+}
+
+header nav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header nav .menu {
+    font-size: 25px;
+    color: black;
+}
+
+header .right-menu {
+    display: flex;
+    align-items: center;
+}
+
+header .right-menu ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header .right-menu ul li {
+    padding: 3px 10px;
+}
+
+header .right-menu ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s linear;
+}
+
+header .right-menu ul li a::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #dc1313;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 45%;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+header .right-menu ul li a:hover {
+    color: #dc1313;
+}
+
+header .right-menu ul li a:hover::before{
+   opacity: 1;
+}
+
+header .left-menu {
+    width: 20px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .left-menu a {
+    margin: 30px 0px;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s linear;
+    transform: rotate(-90deg);
+}
+
+header .left-menu a:hover {
+    color: #dc1313;
+}
+
+header .right-menu .user-cart {
+    font-size: 20px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header .right-menu .user-cart .user {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+header .right-menu .user-cart .user img {
+    width: 100%;
+}
+
+header .right-menu .user-cart .user::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #dc1313;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+header section .content {
+    position: absolute;
+    left: 500px;
+    margin-top: 3%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: 1s linear;
+}
+
+header section .content p {
+    width: 350px;
+    word-break: break-all;
+}
+
+header section .content .price-order {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+header section .content .price-order a {
+    margin-left: -150px;
+    padding: 4px 20px;
+    background-color: #121212;
+    color: white;
+    text-decoration: none;
+}
+
+header section .content .price-order .price h2 {
+    color: #dc1313;
+}
+
+header section .cards {
+    width: 980px;
+    height: 180px;
+    /*border: 1px solid black;*/
+    position: absolute;
+    top: 65%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: 1s linear;
+}
+
+header section .cards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .cards .card {
+    position: relative;
+    min-width: 140px;
+    min-height: 140px;
+    /*border: 1px solid black;*/
+    margin-right: 13px;
+    background: #282828;
+    border-radius: 50px 10px 10px 10px;
+}
+
+header section .cards .card:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+header section .cards .card .dish {
+    width: 70px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+header section .cards .card .steam {
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    left: -5px;
+}
+
+header section .cards .card h4 {
+    position: absolute;
+    top: 20px;
+    right: 13px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+header section .cards .card h5 {
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0px 10px;
+    margin-top: -8px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+header section .cards .card p {
+    color: rgb(203, 203, 203);
+    font-size: 9px;
+    font-weight: 500;
+    padding: 0px 10px;
+}
+
+header section .cards .card .rate-cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 10px;
+    color: white;
+}
+
+header section .cards .card .rate-cart h6 {
+    font-size: 10px;
+}
+
+header section .cards .card .rate-cart .bi {
+    font-size: 12px;
+}
